@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaloGames")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b5b5b819156076023676d90eebc3a32d9365a78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8764f89c667c05b0d62db12941b0a02f5483487e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaloGames")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaloGames")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

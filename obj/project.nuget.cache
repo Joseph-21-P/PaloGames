@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PGOHlE3hY8o=",
+  "dgSpecHash": "8S5sjawonjY=",
   "success": true,
-  "projectFilePath": "D:\\ESPACIO LABORAL\\ESTUDIO\\PROGRAMACION I\\PaloGames\\PaloGames\\PaloGames.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lanto\\Desktop\\universidad\\trabajos\\PaloGames\\PaloGames.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lanto\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\lanto\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\lanto\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\lanto\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.24\\microsoft.netcore.app.host.win-x64.8.0.24.nupkg.sha512"
+  ],
   "logs": []
 }

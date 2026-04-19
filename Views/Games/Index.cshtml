@@ -1,0 +1,23 @@
+@model IEnumerable<PaloGames.Models.Game>
+
+@{
+    ViewData["Title"] = "Catálogo de Juegos";
+}
+
+<h1>Catálogo de Juegos</h1>
+
+<div class="row">
+    @foreach (var game in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-white">
+                <img src="@game.ImageUrl" class="card-img-top" alt="@game.Title" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@game.Title</h5>
+                    <p class="card-text">@game.Genre</p>
+                    <p class="card-text"><strong>$@game.Price</strong></p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -12,6 +12,31 @@
     </div>
 </section>
 
+<section class="filters-section">
+    <form asp-action="Index" method="get" class="filters-form">
+        <div class="filter-group">
+            <input type="text" name="search" class="search-input" placeholder="Buscar por nombre..." value="@ViewBag.Search" />
+        </div>
+        <div class="filter-group">
+            <select name="genre" class="filter-select">
+                <option value="">Todos los géneros</option>
+                @foreach (var g in ViewBag.Genres)
+                {
+                    <option value="@g" selected="@(ViewBag.Genre == g)">@g</option>
+                }
+            </select>
+        </div>
+        <div class="filter-group">
+            <select name="priceOrder" class="filter-select">
+                <option value="">Ordenar por precio</option>
+                <option value="asc" selected="@(ViewBag.PriceOrder == "asc")">Menor a mayor</option>
+                <option value="desc" selected="@(ViewBag.PriceOrder == "desc")">Mayor a menor</option>
+            </select>
+        </div>
+        <button type="submit" class="filter-btn">Filtrar</button>
+    </form>
+</section>
+
 <section class="catalog-grid">
     @foreach (var game in Model)
     {
@@ -25,3 +50,20 @@
         </article>
     }
 </section>
+
+@if (ViewBag.TotalPages > 1)
+{
+    <section class="pagination">
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            if (i == ViewBag.CurrentPage)
+            {
+                <span class="page-number active">@i</span>
+            }
+            else
+            {
+                <a href="@Url.Action("Index", new { search = ViewBag.Search, genre = ViewBag.Genre, priceOrder = ViewBag.PriceOrder, page = i })" class="page-number">@i</a>
+            }
+        }
+    </section>
+}

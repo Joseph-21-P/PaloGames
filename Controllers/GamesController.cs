@@ -45,7 +45,11 @@ namespace PaloGames.Controllers
 
         public IActionResult Index(string search = "", string genre = "", string priceOrder = "", int page = 1)
         {
+agregando-funcionalidad-1
             const int pageSize = 20; // 20 juegos por página
+=======
+            const int pageSize = 12; // 12 juegos por página
+main
 
             var filteredGames = games.AsQueryable();
 

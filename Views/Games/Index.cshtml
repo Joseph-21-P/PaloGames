@@ -4,20 +4,24 @@
     ViewData["Title"] = "Catálogo de Juegos";
 }
 
-<h1>Catálogo de Juegos</h1>
+<section class="catalog-hero">
+    <div>
+        <span class="eyebrow">Catálogo</span>
+        <h1>Explora los mejores juegos</h1>
+        <p>Encuentra títulos destacados, revisa género y precio, y comienza a armar tu colección de videojuegos.</p>
+    </div>
+</section>
 
-<div class="row">
+<section class="catalog-grid">
     @foreach (var game in Model)
     {
-        <div class="col-md-4 mb-4">
-            <div class="card bg-dark text-white">
-                <img src="@game.ImageUrl" class="card-img-top" alt="@game.Title" style="height: 200px; object-fit: cover;">
-                <div class="card-body">
-                    <h5 class="card-title">@game.Title</h5>
-                    <p class="card-text">@game.Genre</p>
-                    <p class="card-text"><strong>$@game.Price</strong></p>
-                </div>
+        <article class="game-card">
+            <div class="game-image" style="background-image: url('@game.ImageUrl');"></div>
+            <div class="game-info">
+                <p class="game-genre">@game.Genre</p>
+                <h2>@game.Title</h2>
+                <p class="game-price">$@game.Price</p>
             </div>
-        </div>
+        </article>
     }
-</div>
+</section>

@@ -32,3 +32,34 @@ C:\Users\lanto\Desktop\universidad\trabajos\PaloGames\obj\Debug\net8.0\refint\Pa
 C:\Users\lanto\Desktop\universidad\trabajos\PaloGames\obj\Debug\net8.0\PaloGames.pdb
 C:\Users\lanto\Desktop\universidad\trabajos\PaloGames\obj\Debug\net8.0\PaloGames.genruntimeconfig.cache
 C:\Users\lanto\Desktop\universidad\trabajos\PaloGames\obj\Debug\net8.0\ref\PaloGames.dll
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\appsettings.Development.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\appsettings.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\PaloGames.staticwebassets.runtime.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\PaloGames.exe
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\PaloGames.deps.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\PaloGames.runtimeconfig.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\PaloGames.dll
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\bin\Debug\net8.0\PaloGames.pdb
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.GeneratedMSBuildEditorConfig.editorconfig
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.AssemblyInfoInputs.cache
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.AssemblyInfo.cs
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.csproj.CoreCompileInputs.cache
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.MvcApplicationPartsAssemblyInfo.cache
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.RazorAssemblyInfo.cache
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.RazorAssemblyInfo.cs
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.sourcelink.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets.build.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets.development.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets\msbuild.PaloGames.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets\msbuild.build.PaloGames.props
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PaloGames.props
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PaloGames.props
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\staticwebassets.pack.json
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\scopedcss\bundle\PaloGames.styles.css
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\scopedcss\projectbundle\PaloGames.bundle.scp.css
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.dll
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\refint\PaloGames.dll
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.pdb
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\PaloGames.genruntimeconfig.cache
+D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\obj\Debug\net8.0\ref\PaloGames.dll

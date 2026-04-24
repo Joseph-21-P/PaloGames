@@ -203,6 +203,22 @@
         font-weight: 800;
         color: white;
     }
+    .btn-add-to-cart {
+    background-color: var(--nexus-purple);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    cursor: pointer;
+    }   
+
+    .btn-add-to-cart:hover {
+    background-color: var(--nexus-purple-light);
+    }
 </style>
 
 <div class="container center-wrapper pb-5">
@@ -268,9 +284,20 @@
                                     <h3 class="game-title">@item.Nombre</h3>
                                     <div class="game-region">GLOBAL</div>
                                     <div class="mt-auto pt-2">
-                                        <div class="game-price-current">
+                                        <div class="game-price-current mb-2">
                                             @item.Precio.ToString("0.00") PEN
                                         </div>
+
+                                        <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <input type="hidden" name="nombre" value="@item.Nombre" />
+                                            <input type="hidden" name="precio" value="@item.Precio" />
+                                            <input type="hidden" name="imagen" value="@item.ImagenUrl" />
+        
+                                            <button type="submit" class="btn-add-to-cart">
+                                                Agregar al Carrito
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

@@ -62,3 +62,37 @@ body {
 .contenido {
   padding: 20px;
 }
+
+/* Estilo del link del carrito */
+.cart-link {
+  position: relative; /* Importante para que el badge se posicione aquí */
+  font-size: 1.4rem;
+  color: #fff;
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+.cart-link:hover {
+  color: #9b51e0; /* El morado de tu marca cuando pasas el mouse */
+}
+
+/* Ajuste opcional: Si tu div 'actions' usa Flexbox, esto los centrará verticalmente */
+.actions {
+  display: flex;
+  align-items: center;
+}
+/* Posicionamiento del icono y el badge */
+
+/* El numerito rojo */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #e63946; /* Un rojo llamativo */
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  line-height: 1;
+}

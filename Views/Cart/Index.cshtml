@@ -1,0 +1,116 @@
+@model List<PaloGames.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Tu Carrito | PaloGames";
+}
+
+<style>
+    .cart-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        background-color: #1c1c28;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #2a2a3a;
+        color: white;
+    }
+    .cart-table {
+        width: 100%;
+        color: white;
+    }
+    .cart-table th {
+        border-bottom: 2px solid #2a2a3a;
+        padding-bottom: 15px;
+        color: #a0a0b0;
+    }
+    .cart-table td {
+        padding: 20px 0;
+        border-bottom: 1px solid #2a2a3a;
+    }
+    .img-thumbnail {
+        width: 60px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    .btn-checkout {
+        background-color: var(--nexus-purple);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        float: right;
+    }
+    .btn-checkout:hover {
+        background-color: var(--nexus-purple-light);
+        color: white;
+    }
+    .back-link {
+    color: var(--nexus-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    }
+
+    .back-link:hover {
+    color: white;
+    text-decoration: underline;
+    }
+</style>
+
+<div class="cart-container">
+    <a asp-controller="Juegos" asp-action="Index" class="back-link">
+        <i class="bi bi-arrow-left"></i> Volver al Catálogo
+    </a>
+
+    <h2 class="mb-4">Tu Carrito</h2>
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Juego</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unit.</th>
+                    <th>Subtotal</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="d-flex align-items-center">
+                            <img src="@item.ImagenUrl" class="img-thumbnail me-3" />
+                            <span>@item.Nombre</span>
+                        </td>
+                        <td>@item.Cantidad</td>
+                        <td>S/ @item.Precio.ToString("0.00")</td>
+                        <td>S/ @((item.Precio * item.Cantidad).ToString("0.00"))</td>
+                        <td>
+                            <a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.JuegoId" class="text-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="mt-4">
+            <h4>Total: S/ @Model.Sum(x => x.Precio * x.Cantidad).ToString("0.00")</h4>
+            <a href="#" class="btn-checkout">Proceder al Pago</a>
+        </div>
+    }
+    else
+    {
+        <div class="text-center py-5">
+            <h4 class="text-muted">Tu carrito está vacío</h4>
+            <a asp-controller="Juegos" asp-action="Index" class="btn btn-outline-light mt-3">Seguir comprando</a>
+        </div>
+    }
+</div>

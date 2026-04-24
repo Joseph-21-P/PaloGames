@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// pipeline
+// pipelinee
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

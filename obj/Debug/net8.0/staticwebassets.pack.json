@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\ESPACIO LABORAL\\ESTUDIO\\temp\\PaloGames\\PaloGames\\Palogames\\wwwroot\\img\\wa.gif",
+      "PackagePath": "staticwebassets\\img\\wa.gif"
+    },
+    {
       "Id": "D:\\ESPACIO LABORAL\\ESTUDIO\\temp\\PaloGames\\PaloGames\\Palogames\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

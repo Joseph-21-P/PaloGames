@@ -2297,19 +2297,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kurobih\\.nuget\\packages\\": {}
+    "C:\\Users\\josee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kurobih\\Desktop\\universidad\\trabajos\\PaloGames\\PaloGames.csproj",
+      "projectUniqueName": "D:\\ESPACIO LABORAL\\ESTUDIO\\temp\\PaloGames\\PaloGames\\Palogames\\PaloGames.csproj",
       "projectName": "PaloGames",
-      "projectPath": "C:\\Users\\kurobih\\Desktop\\universidad\\trabajos\\PaloGames\\PaloGames.csproj",
-      "packagesPath": "C:\\Users\\kurobih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kurobih\\Desktop\\universidad\\trabajos\\PaloGames\\obj\\",
+      "projectPath": "D:\\ESPACIO LABORAL\\ESTUDIO\\temp\\PaloGames\\PaloGames\\Palogames\\PaloGames.csproj",
+      "packagesPath": "C:\\Users\\josee\\.nuget\\packages\\",
+      "outputPath": "D:\\ESPACIO LABORAL\\ESTUDIO\\temp\\PaloGames\\PaloGames\\Palogames\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kurobih\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\josee\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2370,24 +2370,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.26, 8.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2396,7 +2378,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

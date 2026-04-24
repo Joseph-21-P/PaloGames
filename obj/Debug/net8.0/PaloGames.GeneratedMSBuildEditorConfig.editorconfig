@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PaloGames
 build_property.RootNamespace = PaloGames
-build_property.ProjectDir = C:\Users\kurobih\Desktop\universidad\trabajos\PaloGames\
+build_property.ProjectDir = D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kurobih\Desktop\universidad\trabajos\PaloGames
+build_property.MSBuildProjectDirectory = D:\ESPACIO LABORAL\ESTUDIO\temp\PaloGames\PaloGames\Palogames
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Cart/Index.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Home/Index.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Home/Privacy.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Juegos/Index.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Juegos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVlZ29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Shared/Error.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/_ViewImports.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/_ViewStart.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurobih/Desktop/universidad/trabajos/PaloGames/Views/Shared/_Layout.cshtml]
+[D:/ESPACIO LABORAL/ESTUDIO/temp/PaloGames/PaloGames/Palogames/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ghudezvpp8

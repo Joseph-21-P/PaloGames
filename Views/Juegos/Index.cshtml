@@ -1,0 +1,317 @@
+@model IEnumerable<PaloGames.Models.Juego>
+
+@{
+    ViewData["Title"] = "PaloGames - Catálogo";
+    var categoriasSeleccionadas = ViewBag.CategoriasSeleccionadas as List<string>;
+}
+
+<style>
+    :root {
+        --nexus-bg: #14141d;
+        --nexus-purple: #4a2896;
+        --nexus-purple-light: #6a3bc7;
+        --nexus-sidebar-bg: #1c1c28;
+        --nexus-text: #ffffff;
+        --nexus-text-muted: #a0a0b0;
+        --nexus-border: #2a2a3a;
+        --nexus-green: #34d399;
+    }
+
+    body {
+        background-color: var(--nexus-bg) !important;
+        color: var(--nexus-text) !important;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Contenedor central para que no ocupe toda la pantalla */
+    .center-wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    /* Layout Principal */
+    .catalog-layout {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 25px;
+        align-items: start;
+        margin-top: 15px;
+    }
+
+    /* Buscador Superior */
+    .search-top-bar {
+        background-color: var(--nexus-sidebar-bg);
+        border-radius: 8px;
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .search-input-main {
+        background-color: #242433;
+        border: 1px solid var(--nexus-border);
+        color: white;
+        border-radius: 4px;
+        padding: 10px 15px;
+        flex-grow: 1;
+    }
+    .search-input-main:focus {
+        outline: none;
+        border-color: var(--nexus-purple-light);
+    }
+    .btn-clean {
+        background-color: transparent;
+        color: var(--nexus-text-muted);
+        border: 1px solid var(--nexus-border);
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    .btn-clean:hover {
+        background-color: #2a2a3a;
+        color: white;
+    }
+
+    /* Filtros Laterales */
+    .filter-block {
+        background-color: var(--nexus-sidebar-bg);
+        border-radius: 6px;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+    .filter-header {
+        background-color: var(--nexus-purple);
+        padding: 12px 15px;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    .filter-content {
+        padding: 15px;
+        border: 1px solid var(--nexus-border);
+        border-top: none;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    .filter-checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+        color: var(--nexus-text-muted);
+        cursor: pointer;
+    }
+    .filter-checkbox:hover {
+        color: var(--nexus-text);
+    }
+    .filter-checkbox input[type="checkbox"] {
+        accent-color: var(--nexus-purple-light);
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+    }
+    .price-input {
+        background-color: #242433;
+        border: 1px solid var(--nexus-border);
+        color: white;
+        border-radius: 4px;
+        padding: 6px 10px;
+        width: 45%;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    .btn-apply {
+        background-color: var(--nexus-purple-light);
+        color: white;
+        width: 100%;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* Grilla de Juegos */
+    .games-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+    .game-card {
+        background-color: var(--nexus-sidebar-bg);
+        border: 1px solid var(--nexus-border);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .game-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--nexus-purple-light);
+    }
+    .game-image-wrapper {
+        position: relative;
+        padding-top: 133%;
+    }
+    .game-image-wrapper img {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        object-fit: cover;
+    }
+    .game-badge {
+        position: absolute;
+        bottom: 0; left: 0; width: 100%;
+        background-color: rgba(52, 211, 153, 0.9);
+        color: #0f3d2b;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 5px 10px;
+        text-align: center;
+    }
+    .platform-bar {
+        background: linear-gradient(to right, #2a2a35, #1a1a24);
+        padding: 4px 10px;
+        font-size: 0.7rem;
+        color: #b0b0b0;
+        text-align: center;
+        border-bottom: 1px solid var(--nexus-border);
+    }
+    .game-info {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .game-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    .game-region {
+        font-size: 0.75rem;
+        color: var(--nexus-green);
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .game-price-current {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: white;
+    }
+    .btn-add-to-cart {
+    background-color: var(--nexus-purple);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    cursor: pointer;
+    }   
+
+    .btn-add-to-cart:hover {
+    background-color: var(--nexus-purple-light);
+    }
+</style>
+
+<div class="container center-wrapper pb-5">
+    
+    <form asp-controller="Juegos" asp-action="Index" method="get">
+        
+        <h2 class="fw-bold mb-3 text-white">Comprar juegos de PC | PaloGames</h2>
+        
+        <div class="search-top-bar shadow-sm">
+            <input type="text" name="searchString" value="@ViewBag.SearchString" class="search-input-main" placeholder="Buscar un juego (ej. Resident Evil)..." />
+            <button type="submit" class="btn btn-primary px-4 fw-bold" style="background-color: var(--nexus-purple-light); border:none;">Buscar</button>
+            <a asp-action="Index" class="btn-clean">Limpiar Filtros ✖</a>
+        </div>
+
+        <div class="catalog-layout">
+            
+            <aside class="catalog-sidebar">
+                
+                <div class="filter-block">
+                    <div class="filter-header">Precio (PEN)</div>
+                    <div class="filter-content">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <input type="number" name="minPrice" value="@ViewBag.MinPrice" class="price-input" placeholder="Min">
+                            <span class="text-muted">-</span>
+                            <input type="number" name="maxPrice" value="@ViewBag.MaxPrice" class="price-input" placeholder="Max">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-block">
+                    <div class="filter-header">Categoría</div>
+                    <div class="filter-content">
+                        @foreach(var cat in new[] { "Acción", "RPG", "Aventura", "Terror", "Indie" })
+                        {
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="categorias" value="@cat" @(categoriasSeleccionadas.Contains(cat) ? "checked" : "")> @cat
+                            </label>
+                        }
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-apply">Aplicar Filtros</button>
+
+            </aside>
+
+            <main class="catalog-content">
+                <div class="d-flex justify-content-between align-items-center mb-3 text-muted" style="font-size: 0.9rem;">
+                    <span>Resultados encontrados: <strong class="text-white">@Model.Count()</strong></span>
+                </div>
+
+                <div class="games-grid">
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <div class="game-card">
+                                <div class="game-image-wrapper">
+                                    <img src="@item.ImagenUrl" alt="@item.Nombre">
+                                    <div class="game-badge">+ DE CASHBACK</div>
+                                </div>
+                                <div class="platform-bar">🎮 Steam</div>
+                                <div class="game-info">
+                                    <h3 class="game-title">@item.Nombre</h3>
+                                    <div class="game-region">GLOBAL</div>
+                                    <div class="mt-auto pt-2">
+                                        <div class="game-price-current mb-2">
+                                            @item.Precio.ToString("0.00") PEN
+                                        </div>
+
+                                        <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <input type="hidden" name="nombre" value="@item.Nombre" />
+                                            <input type="hidden" name="precio" value="@item.Precio" />
+                                            <input type="hidden" name="imagen" value="@item.ImagenUrl" />
+        
+                                            <button type="submit" class="btn-add-to-cart">
+                                                Agregar al Carrito
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-center py-5 w-100" style="grid-column: 1 / -1;">
+                            <h4 class="text-white">No se encontraron juegos con esos filtros</h4>
+                        </div>
+                    }
+                </div>
+            </main>
+
+        </div>
+    </form>
+</div>

@@ -7,19 +7,27 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// 🔹 Conectar a Redis 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    // conexión  en el appsettings.json
+    options.Configuration = builder.Configuration.GetConnectionString("RedisConnection");
+    options.InstanceName = "PaloEvents_";
+});
+
 builder.Services.AddControllersWithViews();
 
+// 🔹 Sesiones (Ahora usarán Redis automáticamente en el fondo)
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // La sesión dura 30 minutos
+    options.IdleTimeout = TimeSpan.FromMinutes(30); 
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-builder.Services.AddHttpContextAccessor(); // Esto permite acceder a la sesión desde cualquier parte
+builder.Services.AddHttpContextAccessor(); 
 
 var app = builder.Build();
 
-// pipelinee
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -30,7 +38,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseSession();
+app.UseSession(); // Debe estar antes de Authorization
 app.UseAuthorization();
 
 app.MapControllerRoute(

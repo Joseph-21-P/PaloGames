@@ -12,7 +12,6 @@
 </head>
 <body>
 
-    <!-- HEADER -->
     <nav class="navbar">
         <a href="/Home" style="text-decoration: none;">
             <div class="logo">
@@ -48,7 +47,18 @@
         </div>
     </nav>
 
-    <!-- CONTENIDO DE LAS VISTAS (IMPORTANTE) -->
+    @{
+        var ultimoMonto = HttpContextAccessor.HttpContext.Session.GetString("UltimoMonto");
+    }
+    @if (!string.IsNullOrEmpty(ultimoMonto))
+    {
+        <div style="background-color: #38b6ff; color: #0f172a; text-align: center; padding: 8px; font-weight: bold;">
+            <a href="/Cart" style="color: #0f172a; text-decoration: none;">
+                <i class="bi bi-clock-history"></i> Ver última solicitud: S/ @ultimoMonto
+            </a>
+        </div>
+    }
+
     <div class="contenido">
         @RenderBody()
     </div>

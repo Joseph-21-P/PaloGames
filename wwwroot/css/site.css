@@ -1,7 +1,7 @@
 /* Configuración General */
 body {
-    background-color: #0d0d0f; /* Fondo oscuro profundo */
-    color: #ffffff;
+    background-color: #0f172a; /* Fondo azul marino profundo (Más tech/elegante) */
+    color: #f8fafc;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
@@ -12,14 +12,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: #16161a;
-    border-bottom: 2px solid #2a2a32;
+    background-color: #1e293b; /* Azul oscuro para la barra */
+    border-bottom: 2px solid #334155;
 }
 
 .logo {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #00d4ff; /* Un azul neón para el toque gamer */
+    color: #38b6ff; /* AZUL CLARO - El nuevo color principal */
 }
 
 .menu {
@@ -32,12 +32,12 @@ body {
 
 .menu li a {
     text-decoration: none;
-    color: #b0b0b0;
+    color: #cbd5e1;
     transition: color 0.3s;
 }
 
 .menu li a:hover {
-    color: #00d4ff;
+    color: #38b6ff;
 }
 
 /* --- BOTONES DE ACCIÓN Y CARRITO --- */
@@ -53,9 +53,9 @@ body {
     font-size: 0.9rem;
 }
 
-/* Estilo del link del carrito (Compañero + Ajuste Neón) */
+/* Estilo del link del carrito */
 .cart-link {
-  position: relative; /* Importante para que el badge se posicione aquí */
+  position: relative; 
   font-size: 1.4rem !important;
   color: #fff;
   margin-right: 25px;
@@ -64,15 +64,15 @@ body {
 }
 
 .cart-link:hover {
-  color: #00d4ff; /* Ajustado a tu paleta Nexus */
+  color: #38b6ff; /* Ajustado al Azul Claro */
 }
 
-/* El numerito rojo del carrito */
+/* El numerito rojo del carrito (Tickets) */
 .cart-badge {
   position: absolute;
   top: -5px;
   right: -10px;
-  background-color: #e63946; 
+  background-color: #ef4444; 
   color: white;
   font-size: 0.7rem;
   font-weight: bold;
@@ -82,8 +82,8 @@ body {
 }
 
 .btn-registro {
-    background-color: #00d4ff;
-    color: #000;
+    background-color: #38b6ff;
+    color: #0f172a;
     border: none;
     padding: 8px 20px;
     border-radius: 5px;
@@ -94,7 +94,7 @@ body {
 
 .btn-registro:hover {
     transform: scale(1.05);
-    background-color: #00b8e6;
+    background-color: #0ea5e9;
 }
 
 /* Contenido */
@@ -103,7 +103,7 @@ body {
 }
 
 .section-title {
-    border-left: 4px solid #00d4ff;
+    border-left: 4px solid #38b6ff;
     padding-left: 15px;
     margin-bottom: 30px;
 }
@@ -119,11 +119,11 @@ body {
     text-align: left;
 }
 
-/* Imagen de fondo animada */
+/* Imagen de fondo animada (Tinte azulado) */
 .hero-background {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(rgba(13, 13, 15, 0.6), rgba(13, 13, 15, 1)),
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 1)),
                 url('/img/wa.gif'); 
     background-size: cover;
     background-position: center;
@@ -138,7 +138,7 @@ body {
 
 /* Letras Gigantes y Coloridas */
 .giant-title {
-    font-size: 8rem;
+    font-size: 7.5rem; /* Ajustado para la palabra EXPERIENCIA */
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -2px;
@@ -147,7 +147,8 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #00d4ff, #0055ff, #00d4ff);
+    /* Gradiente en tonos de Azul Claro a Celeste */
+    background: linear-gradient(90deg, #38b6ff, #bae6fd, #38b6ff);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -158,75 +159,75 @@ body {
     to { background-position: 200% center; }
 }
 
-/* --- LOS DE ABAJITO (Grid de Juegos) --- */
-.game-grid {
+/* --- LOS DE ABAJITO (Grid de Eventos) --- */
+.event-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 25px;
     padding: 20px 0;
 }
 
-.game-card-placeholder {
+.event-card-placeholder {
     height: 350px;
-    background: #16161a;
+    background: #1e293b;
     border-radius: 15px;
-    border: 1px solid #2a2a32;
+    border: 1px solid #334155;
     transition: all 0.3s ease;
 }
 
-.game-card-placeholder:hover {
+.event-card-placeholder:hover {
     transform: translateY(-10px);
-    border-color: #00d4ff;
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+    border-color: #38b6ff;
+    box-shadow: 0 10px 30px rgba(56, 182, 255, 0.2);
 }
 
 .section-label {
     font-size: 1.2rem;
-    color: #00d4ff;
+    color: #38b6ff;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 20px;
 }
 
-/* Botón Principal (Ver Catálogo) */
+/* Botón Principal (Ver Eventos) */
 .btn-glitch {
     padding: 18px 40px;
     font-size: 1.2rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #000;
-    background: linear-gradient(45deg, #eff2f3, #33abfc);
+    color: #0f172a;
+    background: linear-gradient(45deg, #e0f2fe, #38b6ff);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 15px rgba(56, 182, 255, 0.4);
     transition: all 0.3s ease;
     margin-right: 15px;
 }
 
 .btn-glitch:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(3, 141, 168, 0.6);
+    box-shadow: 0 0 30px rgba(56, 182, 255, 0.6);
     filter: brightness(1.1);
 }
 
-/* Botón Secundario (Ofertas) */
+/* Botón Secundario (Calendario) */
 .btn-outline {
     padding: 18px 40px;
     font-size: 1.2rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: #00d4ff;
+    color: #38b6ff;
     background: transparent;
-    border: 2px solid #00d4ff;
+    border: 2px solid #38b6ff;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-    background: rgba(0, 212, 255, 0.1);
-    box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.2);
+    background: rgba(56, 182, 255, 0.1);
+    box-shadow: inset 0 0 10px rgba(56, 182, 255, 0.2);
 }
 

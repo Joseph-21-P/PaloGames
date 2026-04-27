@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // 🔹 Conexión a PostgreSQL
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql("Host=dpg-d7lealjbc2fs73be4nrg-a.oregon-postgres.render.com;Port=5432;Database=palogames;Username=palogames_user;Password=8oOY4i8zJq9XxGMnwHyhqzmisHG3EX7j"));
 
 // 🔹 Conectar a Redis 
 builder.Services.AddStackExchangeRedisCache(options =>

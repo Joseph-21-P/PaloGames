@@ -29,12 +29,22 @@
 
         <div class="actions">
             @{
-                // Recuperamos la agenda de la sesión (Redis)
+                // Lógica de la Funcionalidad 2: Mi Agenda
                 var agenda = HttpContextAccessor.HttpContext.Session.GetJson<List<Evento>>("MiAgendaSesion");
-                
-                // Contamos cuántos eventos ha guardado el usuario
                 int totalEventos = agenda != null ? agenda.Count : 0;
+
+                // Lógica de la Funcionalidad 3: Eventos Guardados (Me Interesa)
+                var guardados = HttpContextAccessor.HttpContext.Session.GetJson<List<Evento>>("MisGuardadosSesion");
+                int totalGuardados = guardados != null ? guardados.Count : 0;
             }
+
+            <a asp-controller="Guardados" asp-action="Index" class="cart-link" title="Eventos Guardados" style="margin-right: 15px;">
+                <i class="bi bi-bookmark-heart" style="font-size: 1.2rem;"></i>
+                @if (totalGuardados > 0)
+                {
+                    <span class="cart-badge bg-primary">@totalGuardados</span>
+                }
+            </a>
 
             <a asp-controller="Agenda" asp-action="Index" class="cart-link" title="Ver mi agenda de eventos">
                 <i class="bi bi-calendar-check" style="font-size: 1.2rem;"></i>

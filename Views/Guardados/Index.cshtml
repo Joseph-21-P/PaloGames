@@ -1,0 +1,43 @@
+@model IEnumerable<PaloGames.Models.Evento>
+
+@{
+    ViewData["Title"] = "Eventos que me interesan";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 fw-bold text-primary"><i class="bi bi-bookmark-heart"></i> Eventos que me interesan</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center shadow-sm">
+            <h4>No tienes eventos guardados.</h4>
+            <p>Si ves un evento interesante pero aún no te decides, guárdalo aquí para revisarlo después.</p>
+            <a asp-controller="Eventos" asp-action="Index" class="btn btn-outline-dark mt-2">Explorar Eventos</a>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">@item.Categoria</span>
+                            <h5 class="card-title fw-bold">@item.Titulo</h5>
+                            <p class="text-muted"><i class="bi bi-calendar"></i> @item.Fecha.ToString("dd/MM/yyyy")</p>
+                        </div>
+                        <div class="card-footer bg-transparent d-flex justify-content-between">
+                            <a asp-action="Eliminar" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm" title="Quitar de la lista">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                            <a asp-action="MoverAAgenda" asp-route-id="@item.Id" class="btn btn-success btn-sm">
+                                <i class="bi bi-calendar-check"></i> ¡Me decidí, asisto!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,53 @@
+@model IEnumerable<PaloGames.Models.Evento>
+
+@{
+    ViewData["Title"] = "Mi Agenda de Eventos";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 fw-bold"><i class="bi bi-calendar-check"></i> Mi Agenda Universitaria</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center shadow-sm">
+            <h4>Aún no te has apuntado a ningún evento.</h4>
+            <p>Explora la cartelera y únete a hackatons, voluntariados y más.</p>
+            <a asp-controller="Eventos" asp-action="Index" class="btn btn-primary mt-2">Ir a la Cartelera</a>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-hover align-middle mb-0 text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Evento</th>
+                        <th>Categoría</th>
+                        <th>Fecha</th>
+                        <th>Lugar</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold">@item.Titulo</td>
+                            <td><span class="badge bg-secondary">@item.Categoria</span></td>
+                            <td>@item.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@item.Ubicacion</td>
+                            <td>
+                                <a asp-controller="Agenda" asp-action="Eliminar" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                    Cancelar Asistencia
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="text-end mt-4">
+            <a asp-controller="Eventos" asp-action="Index" class="btn btn-outline-dark">Seguir buscando eventos</a>
+        </div>
+    }
+</div>

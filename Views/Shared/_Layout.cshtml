@@ -29,16 +29,18 @@
 
         <div class="actions">
             @{
-                // Recuperamos el carrito y sumamos las cantidades
-                var cart = HttpContextAccessor.HttpContext.Session.GetJson<List<CartItem>>("Cart");
-                int totalItems = cart != null ? cart.Sum(x => x.Cantidad) : 0;
+                // Recuperamos la agenda de la sesión (Redis)
+                var agenda = HttpContextAccessor.HttpContext.Session.GetJson<List<Evento>>("MiAgendaSesion");
+                
+                // Contamos cuántos eventos ha guardado el usuario
+                int totalEventos = agenda != null ? agenda.Count : 0;
             }
 
-            <a asp-controller="Cart" asp-action="Index" class="cart-link" title="Ver mi carrito">
-                <i class="bi bi-cart3"></i>
-                @if (totalItems > 0)
+            <a asp-controller="Agenda" asp-action="Index" class="cart-link" title="Ver mi agenda de eventos">
+                <i class="bi bi-calendar-check" style="font-size: 1.2rem;"></i>
+                @if (totalEventos > 0)
                 {
-                    <span class="cart-badge">@totalItems</span>
+                    <span class="cart-badge">@totalEventos</span>
                 }
             </a>
     
@@ -46,18 +48,6 @@
             <button class="btn-registro">Registro</button>
         </div>
     </nav>
-
-    @{
-        var ultimoMonto = HttpContextAccessor.HttpContext.Session.GetString("UltimoMonto");
-    }
-    @if (!string.IsNullOrEmpty(ultimoMonto))
-    {
-        <div style="background-color: #38b6ff; color: #0f172a; text-align: center; padding: 8px; font-weight: bold;">
-            <a href="/Cart" style="color: #0f172a; text-decoration: none;">
-                <i class="bi bi-clock-history"></i> Ver última solicitud: S/ @ultimoMonto
-            </a>
-        </div>
-    }
 
     <div class="contenido">
         @RenderBody()

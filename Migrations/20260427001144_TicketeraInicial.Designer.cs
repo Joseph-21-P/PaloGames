@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PaloGames.Data;
@@ -11,9 +12,11 @@ using PaloGames.Data;
 namespace PaloGames.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260427001144_TicketeraInicial")]
+    partial class TicketeraInicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,12 +86,8 @@ namespace PaloGames.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Categoria")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("Costo")
-                        .HasColumnType("numeric");
+                    b.Property<int>("CapacidadTotal")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -101,13 +100,16 @@ namespace PaloGames.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Titulo")
+                    b.Property<string>("Lugar")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Ubicacion")
+                    b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<decimal>("PrecioBase")
+                        .HasColumnType("numeric");
 
                     b.HasKey("Id");
 

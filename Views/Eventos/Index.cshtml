@@ -54,9 +54,17 @@
                                 <li><strong>💰 Costo:</strong> @(item.Costo == 0 ? "¡Gratis!" : $"S/ {item.Costo}")</li>
                             </ul>
                         </div>
-                        <div class="card-footer bg-transparent border-top-0 d-flex gap-2 pb-3">
-                            <a asp-action="Detalles" asp-route-id="@item.Id" class="btn btn-outline-dark w-50 fw-bold">Detalles</a>
-                            <a asp-controller="Agenda" asp-action="Agregar" asp-route-id="@item.Id" class="btn btn-success w-50 fw-bold">¡Me apunto!</a>
+                        <div class="card-footer bg-transparent border-top-0 pb-3">
+                            <a asp-action="Detalles" asp-route-id="@item.Id" class="btn btn-outline-dark w-100 fw-bold mb-2">Detalles</a>
+                            
+                            <div class="d-flex gap-2">
+                                <a asp-controller="Guardados" asp-action="Agregar" asp-route-id="@item.Id" class="btn btn-outline-primary w-50" title="Guardar para después">
+                                    <i class="bi bi-bookmark"></i> Guardar
+                                </a>
+                                <a asp-controller="Agenda" asp-action="Agregar" asp-route-id="@item.Id" class="btn btn-success w-50 fw-bold">
+                                    ¡Me apunto!
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
